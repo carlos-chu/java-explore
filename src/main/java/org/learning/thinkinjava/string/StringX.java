@@ -7,6 +7,6 @@ package org.learning.thinkinjava.string;
  * @date 2016年3月3日 下午3:17:17
  *
  */
-public class String {
-
+public class StringX {
+    
 }
