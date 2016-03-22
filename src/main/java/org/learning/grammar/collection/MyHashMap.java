@@ -2,7 +2,7 @@ package org.learning.grammar.collection;
 
 /**
  * @ClassName: MyHashMap
- * @Description: 自定义hashmap
+ * @Description: 自定义hashmap，数据结构是链表加数组
  * @author carlos.chu
  * @date 2016年3月21日 下午3:19:01
  *
@@ -63,10 +63,10 @@ public class MyHashMap<K, V> {
         return null;
     }
 
-    class Entry<K, V> {
+    static class Entry<K, V> {
         final K key;
         V value;
-        Entry<K, V> next; // 指向下个元素的指针
+        Entry<K, V> next; // 指向下个元素的指针，该地址有是数组的地址，这样就兼顾了数组的查询效率和链表的插入效率
 
         public Entry(K key, V value, Entry<K, V> next) {
             this.key = key;
