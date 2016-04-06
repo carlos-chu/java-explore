@@ -1,4 +1,6 @@
-package org.learning.grammar.collection;
+package org.learning.datastructure.map;
+
+import java.util.LinkedList;
 
 /**
  * @ClassName: MyHashMap
