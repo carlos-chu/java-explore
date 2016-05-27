@@ -11,7 +11,7 @@ public class QuickSort {
     public static void main(String[] args) {
         // int a[] = { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 5, 4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35,
         // 25, 53, 51 };
-        int a[] = { 49, 38, 65, 10};
+        int a[] = { 30, 10, 20, 15 };
 
         quick(a);
         for (int i = 0; i < a.length; i++) {
@@ -25,32 +25,28 @@ public class QuickSort {
         }
     }
 
-    private static void quickSort(int[] list, int low, int high) {
-        if (low < high) {
-            int middle = getMiddle(list, low, high);
-            quickSort(list, low, middle - 1); // 对低字表进行递归排序
-            quickSort(list, middle + 1, high); // 对高字表进行递归排序
+    private static void quickSort(int[] list, int left, int right) {
+        if (left < right) {
+            int middle = getMiddle(list, left, right);
+            quickSort(list, left, middle - 1); // 对低字表进行递归排序
+            quickSort(list, middle + 1, right); // 对高字表进行递归排序
         }
     }
 
-    private static int getMiddle(int[] list, int low, int high) {
-        int temp = list[low];
-        while (low < high) {
-            while (low < high && list[high] >= temp) {
-                high--;
+    private static int getMiddle(int[] list, int left, int right) {
+        int temp = list[left];
+        while (left < right) {
+            while (left < right && list[right] >= temp) {
+                right--;
             }
-            list[low] = list[high]; // 比中轴小的记录移到低端
+            list[left] = list[right]; // 比中轴小的记录移到低端
 
-            while (low < high && list[low] <= temp) {
-                low++;
+            while (left < right && list[left] <= temp) {
+                left++;
             }
-            list[high] = list[low]; // 比中轴大的记录移到高端
+            list[right] = list[left]; // 比中轴大的记录移到高端
         }
-        list[low] = temp; // 中轴记录到尾
-        for (int k = 0; k < list.length; k++) {
-            System.out.print(list[k] + " ");
-        }
-        System.out.println();
-        return low; // 返回中轴的位置
+        list[left] = temp; // 中轴记录到尾
+        return left; // 返回中轴的位置
     }
 }
