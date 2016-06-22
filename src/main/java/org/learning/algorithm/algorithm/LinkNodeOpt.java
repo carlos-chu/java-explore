@@ -75,10 +75,10 @@ public class LinkNodeOpt {
             return head;
         }
         LinkNode target = head;
-        LinkNode temp = head;
-        while (temp != null && temp.next != null) {
+        LinkNode fast = head;
+        while (fast != null && fast.next != null) {
             target = target.next;
-            temp = temp.next.next;
+            fast = fast.next.next;
         }
         return target;
     }

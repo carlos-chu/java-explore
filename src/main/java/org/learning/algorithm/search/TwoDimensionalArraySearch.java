@@ -37,7 +37,10 @@ public class TwoDimensionalArraySearch {
         return false;
     }
 
-    public static void arrayItertor(String[] args) {
+    /**
+     * 二维数组遍历
+     */
+    public static void arrayItertor() {
         // 主方法
         char a[][] = new char[3][4];
         // 定义二维数组
