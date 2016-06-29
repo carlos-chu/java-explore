@@ -9,6 +9,10 @@ package org.learning.grammar;
  */
 public class IntegerX {
 
+    /**
+     * 演示高位截取
+     * @param args
+     */
     public static void main(String[] args) {
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Integer.MAX_VALUE + 1);
