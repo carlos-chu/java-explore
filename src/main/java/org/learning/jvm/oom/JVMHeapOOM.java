@@ -14,6 +14,7 @@ import java.util.List;
 public class JVMHeapOOM {
 
     static class OOMObject {
+    	String s = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
     }
 
     /**
