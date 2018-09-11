@@ -80,6 +80,7 @@ public class MyHashMap<K, V> {
     public static void main(String[] args) {
         MyHashMap<String, String> mh = new MyHashMap<String, String>();
         mh.put("a", "a");
+        mh.put("a", "a2");
         mh.put("b", "b");
         System.out.println(mh.get("a") + mh.get("b"));
     }
