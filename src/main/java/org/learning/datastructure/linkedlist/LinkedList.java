@@ -25,13 +25,9 @@ public class LinkedList {
         ListNode prev = null;
         while (head != null) {
             ListNode next = head.next;
-            System.out.println("next = " + next);
             head.next = prev;
-            System.out.println("head.next = " + head.next);
             prev = head;
-            System.out.println("prev = " + prev);
             head = next;
-            System.out.println("head = " + head);
         }
         return prev;
     }
